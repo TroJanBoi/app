@@ -7,9 +7,25 @@ export default async function Home() {
   return (
     <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col px-6 py-10 sm:px-8 lg:py-14">
       <header className="border-b border-zinc-200 pb-8">
-        <p className="text-sm font-medium uppercase tracking-wide text-teal-700">
-          Strapi CMS
-        </p>
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <p className="text-sm font-medium uppercase tracking-wide text-teal-700">
+            Strapi CMS
+          </p>
+          <nav
+            aria-label="Primary"
+            className="flex items-center gap-4 text-sm font-medium"
+          >
+            <Link href="/" className="text-zinc-950">
+              Articles
+            </Link>
+            <Link
+              href="/branches"
+              className="text-zinc-600 hover:text-teal-800"
+            >
+              Branches
+            </Link>
+          </nav>
+        </div>
         <h1 className="mt-3 max-w-3xl text-4xl font-semibold leading-tight text-zinc-950 sm:text-5xl">
           Content from your backend, rendered by Next.js.
         </h1>
